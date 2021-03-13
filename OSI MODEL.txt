@@ -1,0 +1,138 @@
+OSI - Open system Interconnection
+- used to define & understand how data is transferred from one computer to an another 
+
+- introduced by ISO (1984) International standardize organization
+consists of
+1. Application
+2. Presentation
+3. Session
+4. Transport
+5. Network
+6. Datalink
+7. Physical
+
+-Each layer is package of protocol
+
+1. Application Layer
+-used by network applications (browsers,outlook, skype etc) , uses protocol HTTP, HTTPs, NFS, FMTP, DHCP, SNMP, TELNET, POP, IRC, NNTP, etc)
+-provides services like File transfer, Email, Web surfing, Virtual terminal
+
+File transfer- uses FTP
+Web surfing uses HTTP/HTTPs
+Email  uses  SMTP- 
+Virtual terminal uses TELNET
+
+2. Presentation Layer
+--Receies data from application layer, this data in the form of characters & numbers, presentaion layer converts this data into binary format ( machine understandable language)
+E.g cnverting ASCII to EBCDIC code
+
+a)Translation -conersion from characters & numbers into binary format
+b)compression- Presentation layer reduces number of bits that are used to represents original data, can be lossy or Lossless
+c) Encription- to maintain the integrity of data before transmission converts data into non readable format called as encryption
+   Decryption- converts encrypted data into original format
+
+-data sending through SSL
+
+3. Session Layer
+- uses API's 
+-. NETBIOS- Network Basic Input Output System allows applications on different systems to communication between computers
+-Just before session starts with the server, server performs a function called Authentification (process of verifying who you are)
+- After authentification process is success Authorization is checked
+- session layer keeps tack of file downloaded
+
+4. Transport Layer
+- controls  the reliability of communication through segmentation, Flow Control, Error Control
+- in session layer data received from presentation layer is divided into small pieces called segments
+- Each segment contains source,destination, port & sequence number
+- port number helps to direct each segment to the correct application
+- Sequence number helps to reassemble segments in correct order to form correct message at receiver
+- Flow control- controls amount of data being transmitted
+- Transport layer also helps in error control-if transmitted data is not received/missing at destination transport layer enables Automatic Repeat Request to retransmit the missing data/corrucpted data
+- A group of bits called checksum is added into each segments to findout received data is corrupted or missing
+- Uses TCP, UDP
+- Provides services like connection oriented Transmission, connectionless transmission
+	connection oriented Transmission -uses TCP
+	connectionless transmission uses UDP
+UDP is faster than TCP because UDP does not provide acknowledgment whether data is received or not
+UDP is used where streaming video, Email transmission etc
+TCP is used for WWW, FTP etc
+- Transport layer passes data to the Network layer as segments
+
+5. Network Layer
+- Works for the transmission of data from transport layer from one cne computer to another
+- Data units in the network layer are called as Packets
+
+	Functions
+	a) Logical Addressing (IP addressing is done, IPv4, IPv6)
+	2. Routing
+	3. Path determination
+- Every computer in the network has its own unique IP address
+- Network layer assigns source & destination address to each segment to form a packet
+
+Routing is process of moving data packets from source to destination
+
+IP Format
+255.255.255.21
+whhere first 3 255 represents Network and 21 represents address of host
+
+Path determination- suppose computer is connected to a network with many possible paths, network layer finds best path to send data
+
+6. Datalink Layer
+- Receives packets from network layer
+Types of addressing
+	1. Logical addressing - done by Network Layer
+	2. Physical addressing - done by data link layer
+
+- MAC address is added into data packets
+MAC address in 12 digit numeric number embedded into NIC
+- Data in data link layer is called Frame
+- Frames will send from one NIC to an another NIC via local media such as copper wire, optical cable or Air
+
+Functions
+- Allows upper layer of OSI model to access media using technique called as Framing
+- Controlls how data is placed & received from the media using techniques called Media Access Control & Error detection
+
+CSMA
+
+7. Physical Layer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
