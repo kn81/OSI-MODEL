@@ -95,6 +95,10 @@ Functions
 CSMA
 
 7. Physical Layer
+Physical layer is the only layer of OSI network model which actually deals with the physical connectivity of two 
+different stations. This layer defines the hardware equipment, cabling, wiring, frequencies, pulses used to represent
+binary signals etc. Physical layer provides its services to Data-link layer
+
 
 
 
